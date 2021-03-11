@@ -24,5 +24,5 @@ export default function Button(props) {
 }
 
 Button.propTypes = {
-  children: PropTypes.object,
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 };
