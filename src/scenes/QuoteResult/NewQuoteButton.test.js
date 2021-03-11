@@ -12,6 +12,7 @@ describe('Quote Result New Quote Button Test Suite', () => {
     expect(wrapper.text()).toContain('START NEW QUOTE');
   });
 
+  // TODO: Testing simulating click
   // test('simulates click', () => {
   //   const clickMe = jest.fn();
   //   const wrapper = shallow(<NewQuoteButton onNewQuotePress={clickMe} />);
