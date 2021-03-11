@@ -48,7 +48,7 @@ export default function QuoteForm() {
   const [callingNumber, setCallingNumber] = useState('');
   const [fromCurrency, setFromCurrency] = useState('');
   const [toCurrency, setToCurrency] = useState('');
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState();
   const validators = ['required'];
   const errorMessages = ['This field is required.'];
 
