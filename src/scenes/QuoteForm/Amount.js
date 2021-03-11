@@ -4,7 +4,7 @@ import { TextValidator } from 'react-material-ui-form-validator';
 
 export default function Amount({
   updateParentValue,
-  amount,
+  amount = 0,
   required = false,
   validators = [],
   errorMessages = [],
