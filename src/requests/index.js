@@ -1,8 +1,12 @@
 /**
+ * Get a customer rate.
  *
- * @param {*} caller
- * @param {*} url
- * @returns
+ * (Caller dependency is injected into the function which makes unit testing possible.
+ * The dependency refer only to abstractions, not concretions.)
+ *
+ * @param {promise} caller Request caller
+ * @param {string} url An API to call
+ * @returns promise A promise resolves to a number
  */
 export const getCustomerRate = (caller, url) => {
   return caller(url)
@@ -16,6 +20,6 @@ export const getCustomerRate = (caller, url) => {
     })
     .then((data) => {
       const { CustomerRate } = data || {};
-      return CustomerRate;
+      return Number(CustomerRate);
     });
 };
