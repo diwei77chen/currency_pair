@@ -6,7 +6,7 @@
  *
  * @param {promise} caller Request caller
  * @param {string} url An API to call
- * @returns promise A promise resolves to a number
+ * @returns {promise} A promise resolves to a number
  */
 export const getCustomerRate = (caller, url) => {
   return caller(url)
