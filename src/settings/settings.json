@@ -1,0 +1,4 @@
+{
+    "OFX_PUBLIC_INDIVIDUAL_API": "https://api.ofx.com/PublicSite.ApiService/OFX/spotrate/Individual",
+    "CUSTOMER_ID": "10000"
+}
