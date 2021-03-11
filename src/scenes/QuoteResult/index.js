@@ -37,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+// TODO: Ideally this component should be broken down to smaller components as QuoteForm for the sake of maintainence and testing
 export default function QuoteResult({ location = {} }) {
   const { state } = location;
   const { amount, customerRate, fromCurrency, toCurrency } = state || {};
