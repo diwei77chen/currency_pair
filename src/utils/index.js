@@ -58,3 +58,13 @@ export const getCurrencyCodeDisplay = (code) => {
 export const formatNumber = (number) => {
   return number.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
 };
+
+export const buildCustomerRateAPI = (
+  api,
+  fromCurrency,
+  toCurrency,
+  customerID
+) => {
+  if (!api || !fromCurrency || !toCurrency || !customerID) return '';
+  return `${api}/${fromCurrency}/${toCurrency}/${customerID}?format=json`;
+};

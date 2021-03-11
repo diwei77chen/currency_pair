@@ -17,6 +17,7 @@ import {
   OFX_PUBLIC_INDIVIDUAL_API,
   CUSTOMER_ID,
 } from '../../settings/settings';
+import { buildCustomerRateAPI } from '../../utils';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -47,7 +48,7 @@ export default function QuoteForm() {
   const [callingNumber, setCallingNumber] = useState('');
   const [fromCurrency, setFromCurrency] = useState('');
   const [toCurrency, setToCurrency] = useState('');
-  const [amount, setAmount] = useState('');
+  const [amount, setAmount] = useState(0);
   const validators = ['required'];
   const errorMessages = ['This field is required.'];
 
@@ -65,7 +66,12 @@ export default function QuoteForm() {
         className={classes.form}
         onSubmit={() => {
           console.log('onSubmit is pressed.');
-          const url = `${OFX_PUBLIC_INDIVIDUAL_API}/${fromCurrency}/${toCurrency}/${CUSTOMER_ID}?format=json`;
+          const url = buildCustomerRateAPI(
+            OFX_PUBLIC_INDIVIDUAL_API,
+            fromCurrency,
+            toCurrency,
+            CUSTOMER_ID
+          );
           getCustomerRate(fetch, url)
             .then((customerRate) => {
               const quoteResultLocation = {
