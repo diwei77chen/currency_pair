@@ -14,13 +14,13 @@ Please have a Node dependency installed in your environment:
 
 Open a new terminal window, change the directory to this project:
 
-1. Install the dependencies.
+1. Install the dependencies:
 
-   npm install
+   `npm install`
 
-2. Start the app.
+2. Start the app:
 
-   npm start
+   `npm start`
 
 # Design Guide
 
@@ -35,7 +35,7 @@ Due to the time constraint, there are only minimal tests covered in the project.
 
 Open a new terminal window, change the directory to this project and run:
 
-    npm test
+`npm test`
 
 ### 1. Unit Tests
 
